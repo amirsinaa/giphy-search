@@ -6,6 +6,6 @@ The purpose of this application is more about best practices than the applicatio
 
 - register for an account <https://developers.giphy.com/>
 - create a new app and genrate an API key
-- rename .env.example to .env
+- rename `.env.example` to `.env`
 - put your API key in `REACT_APP_GIPHY_API_KEY` enviorment variable
 - run `npm run start`
