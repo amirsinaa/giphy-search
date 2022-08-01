@@ -1,6 +1,7 @@
 # Giphy Search
 Simple GIF searching react app using Giphy API
 
+The purpose of this application is more about best practices than the application logic complexity
 # Guide
 
 - register for an account <https://developers.giphy.com/>
