@@ -36,7 +36,6 @@ Simple GIF searching react app using Giphy API
 │   ├── types/
 │   │   ├── gif.d.ts
 |   |   └── index.ts
-│   ├── index.css
 │   ├── index.tsx
 │   ├── react-app-env.d.ts
 │   ├── reportWebVitals.ts
