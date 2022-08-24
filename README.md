@@ -5,6 +5,7 @@ Simple GIF searching react app using Giphy API
 
 # Structure
 
+```bash
 ├── public # publicly accessible assets
 ├── src
 │   ├── api/
@@ -44,6 +45,7 @@ Simple GIF searching react app using Giphy API
 ├── package.json
 ├── package-lock.json
 └── .gitignore
+```
 
 # Guide
 
