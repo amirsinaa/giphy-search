@@ -1,7 +1,7 @@
 {
 	"name": "giphy-search",
 	"description": " Simple GIF searching react app using Giphy API",
-	"author": "Amirsina Shadkami <amirsina23@gmail.com> (https://amirsina.dev)",
+	"author": "Amirsina Shadkami <amirsina23@gmail.com> (https://amirsina.netlify.app)",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/amirsinaa/giphy-search"
