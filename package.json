@@ -1,7 +1,8 @@
 {
 	"name": "giphy-search",
-	"description": " Simple GIF searching react app using Giphy API",
+	"description": "Simple GIF searching react app using Giphy API",
 	"author": "Amirsina Shadkami <amirsina23@gmail.com> (https://amirsina.netlify.app)",
+	"proxy": "https://api.giphy.com/",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/amirsinaa/giphy-search"
@@ -12,11 +13,11 @@
 		"@emotion/styled": "^11.9.3",
 		"@radix-ui/colors": "^0.1.8",
 		"@radix-ui/react-icons": "^1.1.1",
-		"@radix-ui/react-label": "^1.0.0",
+		"@radix-ui/react-select": "^1.0.0",
 		"@tanstack/react-query": "^4.0.10",
 		"@testing-library/jest-dom": "^5.16.4",
-		"@testing-library/react": "^13.3.0",
 		"@testing-library/user-event": "^13.5.0",
+		"@testing-library/react": "^13.3.0",
 		"@types/jest": "^27.5.2",
 		"@types/node": "^16.11.45",
 		"@types/react": "^18.0.15",
