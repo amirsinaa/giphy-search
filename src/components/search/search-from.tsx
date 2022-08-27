@@ -1,9 +1,11 @@
-import { useForm, SubmitHandler } from 'react-hook-form';
+import { useForm, Controller, SubmitHandler } from 'react-hook-form';
+import { SelectBox, SelectItem } from "./select-box";
+import { GIPHY_QUERY } from '../../constants/giphy';
+import { useQuery } from '@tanstack/react-query';
+import { Loading } from '../animation/loading';
 import { SEARCH_GIF } from '../../api/search';
 import { GifQuery } from '../../types';
-import { useQuery } from '@tanstack/react-query';
 import { useState } from 'react';
-import { Loading } from '../animation/loading';
 
 export const SearchFrom = () => {
   const gifQueryLazyInitialization = () => {
@@ -17,47 +19,93 @@ export const SearchFrom = () => {
 
   const [gifQuery, setgifQuery] = useState<GifQuery>(gifQueryLazyInitialization);
 
-  const { register, handleSubmit } = useForm<GifQuery>();
+  const { control, register, handleSubmit } = useForm<GifQuery>();
 
   const { isLoading, error, data }: any = useQuery(
     ['gifs', gifQuery],
     () => SEARCH_GIF(gifQuery)
   );
 
-  const onSubmit: SubmitHandler<GifQuery> = (searchInputData) =>
+  const onSubmit: SubmitHandler<GifQuery> = data => {
     setgifQuery({
-      gifQueryString: searchInputData.gifQueryString,
-      gifLimit: searchInputData.gifLimit,
-      gifRating: searchInputData.gifRating,
-      gifLang: searchInputData.gifLang
-    });
+      gifQueryString: data.gifQueryString,
+      gifLimit: data.gifLimit,
+      gifRating: data.gifRating,
+      gifLang: data.gifLang
+    })
+  };
 
   return (
     <>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <input {...register('gifQueryString')} />
-        <select {...register('gifLimit', { required: true })}>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-          <option value="6">6</option>
-          <option value="7">7</option>
-          <option value="8">8</option>
-          <option value="9">9</option>
-          <option value="10">10</option>
-        </select>
-        <select {...register('gifRating', { required: true })}>
-          <option value="g">g</option>
-          <option value="pg">2</option>
-          <option value="pg-13">pg-13</option>
-          <option value="r">r</option>
-        </select>
-        <select {...register('gifLang', { required: true })}>
-          <option value="en">en</option>
-          <option value="fr">fr</option>
-        </select>
+        <input {...register('gifQueryString')} type="text" defaultValue="space cat" />
+
+        <Controller
+          name="gifLimit"
+          control={control}
+          render={({ field }) => (
+            <SelectBox
+              {...field}
+              value={field.value}
+              onValueChange={field.onChange}
+              placeholder='Select a gif limit'
+            >
+              {GIPHY_QUERY.limit.map(item => (
+                <SelectItem
+                  key={item.id}
+                  value={String(item.length)}
+                >
+                  {item.length}
+                </SelectItem>
+              ))}
+            </SelectBox>
+          )}
+        />
+
+        <Controller
+          name="gifRating"
+          control={control}
+          render={({ field }) => (
+            <SelectBox
+              {...field}
+              value={field.value}
+              onValueChange={field.onChange}
+              placeholder='Select a rating constraint'
+            >
+              {GIPHY_QUERY.rating.map(item => (
+                <SelectItem
+                  key={item.id}
+                  value={String(item.age)}
+                >
+                  {item.age}
+                </SelectItem>
+              ))}
+            </SelectBox>
+          )}
+        />
+
+        <Controller
+          name="gifLang"
+          control={control}
+          render={({ field }) => (
+            <SelectBox
+              {...field}
+              value={field.value}
+              onValueChange={field.onChange}
+              placeholder='Select a language'
+            >
+              {GIPHY_QUERY.languages.map(item => (
+                <SelectItem
+                  key={item.id}
+                  value={String(item.language)}
+                >
+                  {item.language}
+                </SelectItem>
+              ))}
+            </SelectBox>
+          )}
+        />
+
         <input type="submit" />
       </form>
 
