@@ -4,7 +4,7 @@ import { GIPHY_QUERY } from '../../constants/giphy';
 import { useQuery } from '@tanstack/react-query';
 import { Loading } from '../animation/loading';
 import { SEARCH_GIF } from '../../api/search';
-import { GifQuery } from '../../types';
+import { GifQuery, GifData } from '../../types';
 import { useState } from 'react';
 
 export const SearchFrom = () => {
@@ -112,9 +112,9 @@ export const SearchFrom = () => {
       {isLoading && <Loading />}
       {error && <>An error has occurred: {error.message} </>}
       {data && <> {
-        data.data.map((gif: any) =>
+        data.data.map((gif: GifData) =>
           <div key={gif.id}>
-            <img src={gif.images.original.url} width={gif.images.original.width} height={gif.images.original.width} />
+            <img src={gif.images.original.url} width={gif.images.original.width} height={gif.images.original.width} alt={gif.title} />
           </div>
         )
       }
