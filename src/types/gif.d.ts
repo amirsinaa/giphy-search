@@ -6,12 +6,12 @@ export type GifQuery = {
 };
 
 export interface Gif {
-  data: Data[];
+  data: GifData[];
   pagination: Pagination;
   meta: Meta;
 }
 
-export interface Data {
+export interface GifData {
   type: string;
   id: string;
   url: string;
