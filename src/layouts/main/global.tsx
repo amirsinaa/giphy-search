@@ -6,7 +6,6 @@ export const GlobalStyles = () => (
     styles={`
       //CSS Reset
       //Credit: https://www.joshwcomeau.com
-
       *, *::before, *::after {
         box-sizing: border-box;
       }
@@ -48,16 +47,6 @@ export const GlobalStyles = () => (
         background-color: ${theme.colors.lightGray}
         color: ${theme.colors.black}
       }
-
-      //Animations
-      @keyframes SpinnerRotation {
-          from {
-            transform: rotate(0deg);
-          }
-          to {
-            transform: rotate(360deg);
-          }
-        }
-      `}
+    `}
   />
 )
