@@ -7,6 +7,7 @@ declare module '@emotion/react' {
       lightGray: string
       primary: string
       accent: string
+      white: string
       black: string
       gray: string
     }
