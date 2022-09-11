@@ -128,3 +128,9 @@ export interface Pagination {
   count: number;
   offset: number;
 }
+
+
+export type SelectBoxItemProps = {
+  children: React.ReactNode,
+  value: string
+}
