@@ -19,7 +19,27 @@ export const GIPHY_QUERY = {
     {
       id: 1004,
       length: 5,
-    }
+    },
+    {
+      id: 1005,
+      length: 6,
+    },
+    {
+      id: 1006,
+      length: 7,
+    },
+    {
+      id: 1007,
+      length: 8
+    },
+    {
+      id: 1008,
+      length: 9
+    },
+    {
+      id: 1009,
+      length: 10,
+    },
   ],
   rating: [
     {
