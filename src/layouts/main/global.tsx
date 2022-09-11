@@ -13,9 +13,6 @@ export const GlobalStyles = () => (
         margin: 0;
         line-height: calc(1em + 0.725rem)
       }
-      html, body {
-        height: 100%;
-      }
       body {
         line-height: 1.5;
         -webkit-font-smoothing: antialiased;
@@ -23,6 +20,7 @@ export const GlobalStyles = () => (
       img, picture, video, canvas, svg {
         display: block;
         max-width: 100%;
+        object-fit: cover;
       }
       input, button, textarea, select {
         font: inherit;
@@ -44,8 +42,10 @@ export const GlobalStyles = () => (
           sans-serif;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
-        background-color: ${theme.colors.lightGray}
-        color: ${theme.colors.black}
+        background-color: ${theme.colors.lightGray};
+        color: ${theme.colors.black};
+        display: flex;
+        flex-direction: column;
       }
     `}
   />
