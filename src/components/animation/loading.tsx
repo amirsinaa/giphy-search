@@ -1,19 +1,22 @@
-import styled from '@emotion/styled'
+import { SpinnerWrapper, Spinner } from './styles';
 
-const Spinner = styled.div(`
-  animation: SpinnerRotation 800ms linear infinite;
-  width: 100px;
-  height: 100px;
-  border: 5px solid #f3f3f3;
-  border-left: 5px solid #333333;
-  background: transparent;
-  border-radius: 100%;
-  display: flex;
-`);
-
-
-export function Loading() {
+export const Loading = () => {
   return (
-    <Spinner />
+    <SpinnerWrapper>
+      <Spinner
+        animate={{
+          scale: [1, 2, 2, 1, 1],
+          rotate: [0, 90, 180, 180, 0],
+          borderRadius: ["5%", "10%", "50%", "50%", "5%"]
+        }}
+        transition={{
+          duration: 2,
+          ease: "easeInOut",
+          times: [0, 0.2, 0.5, 0.8, 1],
+          repeat: Infinity,
+          repeatDelay: 0
+        }}
+      />
+    </SpinnerWrapper>
   )
 }
