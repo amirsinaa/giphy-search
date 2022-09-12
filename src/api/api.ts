@@ -11,13 +11,13 @@ const api = (axios: AxiosInstance) => {
     get: <T>(url: string, config: AxiosRequestConfig = {}) =>
       (axios.get<T>(url, config)),
     delete: <T>(url: string, config: AxiosRequestConfig = {}) =>
-      (axios.delete(url, config)),
+      (axios.delete<T>(url, config)),
     put: <T>(url: string, config: AxiosRequestConfig = {}) =>
-      (axios.put(url, config)),
+      (axios.put<T>(url, config)),
     post: <T>(url: string, config: AxiosRequestConfig = {}) =>
-      (axios.post(url, config)),
+      (axios.post<T>(url, config)),
     patch: <T>(url: string, config: AxiosRequestConfig = {}) =>
-      (axios.patch(url, config))
+      (axios.patch<T>(url, config))
   }
 }
 
