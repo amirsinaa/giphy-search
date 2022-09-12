@@ -1,5 +1,7 @@
 # Giphy Search
 
+![demo](https://raw.githubusercontent.com/amirsinaa/giphy-search/main/.github/demo.gif)
+
 Simple GIF searching react app using Giphy API
 > The purpose of this application is more about best practices than the application logic complexity
 
