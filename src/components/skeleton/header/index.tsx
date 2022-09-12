@@ -1,8 +1,25 @@
-function Header() {
+import {
+  HeaderWrapper,
+  ListItem,
+  Menu,
+  List,
+  Link
+} from './styles';
+
+const Header = () => {
   return (
-    <header>
-      header
-    </header>
+    <HeaderWrapper>
+      <Menu>
+        <List>
+          <ListItem>
+            <Link to="/">Home</Link>
+          </ListItem>
+          <ListItem>
+            <Link to="/about">About</Link>
+          </ListItem>
+        </List>
+      </Menu>
+    </HeaderWrapper>
   )
 }
 
