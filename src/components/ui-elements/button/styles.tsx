@@ -19,7 +19,6 @@ export const Button = styled.button(`
   flex-wrap: wrap;
   align-content: center;
   width: 80%;
-  // box-shadow: 1px 2px 2px hsl(0, 0%, 68.6%),2px 4px 4px hsl(0, 0%, 68.6%);
   transition: transform ease-in 150ms, box-shadow ease-in 150ms, background ease-in 200ms, color ease-in 200ms;
   &:hover {
     cursor: pointer;
@@ -27,5 +26,9 @@ export const Button = styled.button(`
     color: ${theme.colors.white};
     background: ${theme.colors.accent};
     transform: scale(1.02);
+  }
+  @media only screen and (max-width: 694px) {
+    width: 100%;
+    margin: 10px;
   }
 `);

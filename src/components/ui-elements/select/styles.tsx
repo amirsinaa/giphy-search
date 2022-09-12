@@ -31,7 +31,8 @@ export const StyledSelectContent = styled(SelectPrimitive.Content)({
   overflow: 'hidden',
   backgroundColor: 'white',
   borderRadius: 6,
-  fontSize: '1rem'
+  fontSize: '1rem',
+  boxShadow: '1px 2px 2px hsl(0, 0%, 68.6%),2px 4px 4px hsl(0, 0%, 68.6%)'
 });
 
 export const StyledSelectTrigger = styled(SelectPrimitive.Trigger)({
@@ -46,7 +47,11 @@ export const StyledSelectTrigger = styled(SelectPrimitive.Trigger)({
   lineHeight: 2,
   margin: '10px',
   width: '25%',
-  gap: '75%',
+  gap: '85%',
+  '@media only screen and (max-width: 694px)': {
+    width: '100%',
+    gap: '95%',
+  },
   backgroundColor: 'white',
   color: theme.colors.accent,
   transition: 'background-color ease 250ms, box-shadow ease 200ms',
@@ -62,7 +67,9 @@ export const StyledSelectTrigger = styled(SelectPrimitive.Trigger)({
 export const StyledSelectLabel = styled(SelectPrimitive.Label)({
   color: theme.colors.secondary,
   padding: '0 25px',
-  fontSize: '0.8rem',
+  fontSize: '0.99rem',
+  textAlign: 'center',
+  fontWeight: 600,
   lineHeight: '25px',
 
 });
