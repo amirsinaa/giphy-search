@@ -14,29 +14,52 @@ Simple GIF searching react app using Giphy API
 │   │   └── api.ts # Application API layer
 │   ├── components
 │   │   ├── animation/
-|   │   │   ├── loading.tsx
-|   │   │   └── page-transition.tsx
-│   │   ├── search/
-│   │   │   └── search-from.tsx
-│   │   └── skeleton/
+│   │   │   ├── loading.tsx
+│   │   │   ├── styles.tsx
+│   │   │   └── page-transition.tsx
+│   │   ├── gif/
+│   │   │   ├── styles.tsx
+│   │   │   └── search-gif.tsx
+│   │   ├── skeleton/
 │   │   │   ├── header/
-│   │   │       └── index.tsx
+│   │   │   │   ├── styles.tsx
+│   │   │   │   └── index.tsx
 │   │   │   └── footer/
-│   │   │       └── index.tsx
+│   │   │   │   ├── styles.tsx
+│   │   │   │   └── index.tsx
+│   │   └── ui-elements/
+│   │   │   ├── button/
+│   │   │   │   ├── styles.tsx
+│   │   │   │   ├── buttons.tsx
+│   │   │   │   └── index.tsx
+│   │   │   ├── form/
+│   │   │   │   └── index.tsx
+│   │   │   ├── input/
+│   │   │   │   ├── inputs.tsx
+│   │   │   │   └── index.tsx
+│   │   │   └── select/
+│   │   │   │   ├── select-box-item.tsx
+│   │   │   │   ├── styles.tsx
+│   │   │   │   └── select-box.tsx
 │   ├── constants
+│   │   ├── theme.tsxgiphy.ts
 │   │   └── animations.ts
 │   ├── layouts
 │   │   ├── main/
-|   │   |   ├── theme.tsx
-|   │   |   ├── global.tsx
-│   │   │   └── index.tsx # Giphy API search method
+│   │   │   ├── theme.tsx
+│   │   │   ├── global.tsx
+│   │   │   ├── styles.tsx
+│   │   │   └── index.tsx
 │   ├── pages/
 │   │   ├── home/
 │   │   │   └── index.tsx
+│   │   └──about
+│   │   │   └── index.tsx
 │   ├── types/
 │   │   ├── gif.d.ts
-|   |   └── index.ts
+│   │   └── index.ts
 │   ├── index.tsx
+│   ├── emotion.d.ts
 │   ├── react-app-env.d.ts
 │   ├── reportWebVitals.ts
 │   └── setupTests.ts
