@@ -1,6 +1,8 @@
 # Giphy Search
 
-![demo](https://raw.githubusercontent.com/amirsinaa/giphy-search/main/.github/demo.gif)
+<p align="center">
+  <img src="https://raw.githubusercontent.com/amirsinaa/giphy-search/main/.github/demo.gif" />
+</p>
 
 Simple GIF searching react app using Giphy API
 > The purpose of this application is more about best practices than the application logic complexity
