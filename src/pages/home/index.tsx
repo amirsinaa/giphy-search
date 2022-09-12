@@ -1,7 +1,7 @@
-import { SearchFrom } from '../../components/search/search-from'
+import { SearchGif } from '../../components/gif/search-gif'
 
 function Home() {
-  return <SearchFrom />;
+  return <SearchGif />;
 }
 
 export default Home;
