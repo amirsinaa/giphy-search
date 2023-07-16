@@ -13,7 +13,7 @@ function App() {
   const [queryClient] = useState(() => new QueryClient());
   return (
     <QueryClientProvider client={queryClient}>
-      <AnimatePresence exitBeforeEnter>
+      <AnimatePresence mode='wait'>
         <Router>
           <MainLayout>
             <Routes>
