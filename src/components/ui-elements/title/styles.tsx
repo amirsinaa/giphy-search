@@ -2,7 +2,7 @@ import { theme } from '../../../layouts/main/theme';
 import styled from '@emotion/styled';
 
 export const Title = styled('h1')`
-  padding: 0 0 3rem 0;
+  padding: 0 0 1rem 0;
   font-size: 1.7rem;
   color: ${theme.colors.black};
   font-weight: 700;

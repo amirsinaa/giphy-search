@@ -3,9 +3,9 @@ import styled from '@emotion/styled';
 
 export const TechnologyBox = styled('div')`
   display: flex;
+  margin: 1rem 0;
   flex-direction: column;
   width: 100%;
-
   @media (min-width: 1024px) {
     flex-direction: row;
   }
@@ -24,4 +24,7 @@ export const TechnologyCard = styled('div')`
   border-radius: 8px;
   justify-content: center;
   align-items: center;
+    @media (max-width: 1023px) {
+    margin: 1rem;
+  }
 `;
